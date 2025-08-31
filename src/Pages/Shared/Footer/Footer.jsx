@@ -58,6 +58,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        <div className="w-full">
+          <p className="w-full text-center">Copyright © 2025 - All right reserved by ACME Industries Ltd</p>
+        </div>
       </footer>
     </div>
   );
