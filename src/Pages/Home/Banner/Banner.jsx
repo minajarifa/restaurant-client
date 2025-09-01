@@ -1,10 +1,10 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"
-import img1 from "../../../../public/imagesBanner/img1.jpeg"
-import img2 from "../../../../public/imagesBanner/img2.jpeg"
-import img3 from "../../../../public/imagesBanner/img3.jpeg"
-import img4 from "../../../../public/imagesBanner/img4.jpeg"
-import img5 from "../../../../public/imagesBanner/img5.jpeg"
+import img1 from "../../../../public/images/imagesBanner/img1.jpeg"
+import img2 from "../../../../public/images/imagesBanner/img2.jpeg"
+import img3 from "../../../../public/images/imagesBanner/img3.jpeg"
+import img4 from "../../../../public/images/imagesBanner/img4.jpeg"
+import img5 from "../../../../public/images/imagesBanner/img5.jpeg"
 
 export default function Banner() {
   return (
