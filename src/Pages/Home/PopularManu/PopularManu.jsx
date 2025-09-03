@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Title from "../../../../Components/Title/Title";
-import MenuItem from "../../../Shared/ManuItem/MenuItem";
+import Title from "../../../Components/Title/Title";
+import MenuItem from "../../Shared/ManuItem/MenuItem";
 
 
 export default function PopularManu() {

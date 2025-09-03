@@ -1,5 +1,5 @@
 import Banner from "./Banner/Banner";
-import PopularManu from "./Banner/PopularManu/PopularManu";
+import PopularManu from "./PopularManu/PopularManu";
 import Category from "./Category/Category";
 
 
