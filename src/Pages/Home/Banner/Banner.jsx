@@ -9,38 +9,15 @@ import img5 from "../../../../public/images/imagesBanner/img5.jpeg";
 export default function Banner() {
   return (
     <>
-      {/* <div className="">
-      <Carousel
-        showArrows={true}
-        // onChange={onChange}
-        // onClickItem={onClickItem}
-        // onClickThumb={onClickThumb}
-      >
-        <div className="min-h-screen ">
-          <img src={img1}/>
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img src={img2} />
-          <p className="legend">Legend 2</p>
-        </div>
-        <div>
-          <img src={img3} />
-          <p className="legend">Legend 3</p>
-        </div>
-        <div>
-          <img src={img4}/>
-          <p className="legend">Legend 4</p>
-        </div>
-        <div>
-          <img src={img5} />
-          <p className="legend">Legend 5</p>
-        </div>
-        
-      </Carousel>
-    </div> */}
       <div className="">
-        <Carousel showArrows={true}>
+        <Carousel
+          showArrows={true}
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={3000}
+          stopOnHover={true}
+          showStatus={false}
+        >
           <div className="h-[400px]">
             {/* ekhane fixed height */}
             <img src={img1} className="object-cover w-full h-full" />
