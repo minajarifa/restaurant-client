@@ -16,7 +16,7 @@ export default function PopularManu() {
     },[])
     console.log(menu)
   return (
-    <div>
+    <div className="py-8">
         <Title heading={`From our manu`} subHeading={`Popular Items`}/>
         <div className="grid grid-cols-2 gap-4">
             {
