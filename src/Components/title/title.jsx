@@ -1,8 +1,10 @@
-export default function title({heading, subHeading}) {
+
+
+export default function Title({heading, subHeading}) {
   return (
-    <div className="mx-auto md:w-3/12">
-        <p className="">{heading}</p>
-        <p className="">{subHeading}</p>
+     <div className="mx-auto md:w-4/12 ">
+        <p className="text-yellow-600">{heading}</p>
+        <p className="py-4 mb-4 text-4xl uppercase border-y-4">{subHeading}</p>
     </div>
   )
 }
