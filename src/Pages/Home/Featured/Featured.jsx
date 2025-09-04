@@ -4,9 +4,9 @@ import "./Featured.css"
 
 export default function Featured() {
   return (
-    <div className="mt-10 text-white featured-item">
+    <div className="my-10 mt-8 text-white bg-fixed featured-item">
       <Title heading={"Featured Item"} subHeading={"check it out"} />
-      <div className="items-center justify-center py-20 px-36 md:flex">
+      <div className="items-center justify-center py-20 px-36 md:flex bg-slate-500">
         <div>
           <img src={featured} alt="" />
         </div>
