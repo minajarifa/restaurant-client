@@ -2,6 +2,7 @@ import Banner from "./Banner/Banner";
 import PopularManu from "./PopularManu/PopularManu";
 import Category from "./Category/Category";
 import Featured from "./Featured/Featured";
+import Testimonials from "./Testimonials/Testimonials";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Category/>
       <PopularManu/>
       <Featured/>
+      <Testimonials/>
     </div>
   )
 }

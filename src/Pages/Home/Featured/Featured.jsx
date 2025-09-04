@@ -8,7 +8,7 @@ export default function Featured() {
       <Title heading={"Featured Item"} subHeading={"check it out"} />
       <div className="items-center justify-center py-20 px-36 md:flex bg-slate-700 bg-opacity-60">
         <div>
-          <img src={featured} alt="" />
+          <img src={featured} alt=""/>
         </div>
         <div className="md:ml-10">
           <p>Aug 20, 2029</p>
