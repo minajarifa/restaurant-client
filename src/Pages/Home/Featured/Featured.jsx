@@ -1,5 +1,6 @@
 import Title from "../../../Components/Title/Title";
 import featured from "../../../../public/images/Fetured/featured.jpeg"
+// import "./Featured.css"
 
 export default function Featured() {
   return (
