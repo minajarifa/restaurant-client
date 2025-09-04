@@ -6,7 +6,7 @@ export default function Featured() {
   return (
     <div className="my-10 mt-8 text-white bg-fixed featured-item">
       <Title heading={"Featured Item"} subHeading={"check it out"} />
-      <div className="items-center justify-center py-20 px-36 md:flex bg-slate-500">
+      <div className="items-center justify-center py-20 px-36 md:flex bg-slate-700 bg-opacity-60">
         <div>
           <img src={featured} alt="" />
         </div>
@@ -21,7 +21,7 @@ export default function Featured() {
             delectus minus officia quidem ex est at, corrupti consectetur quia
             dolores itaque. Fugiat, odio!
           </p>
-          <button className="btn btn-outline">Order Now</button>
+          <button className="border-0 border-b-2 btn btn-outline">Order Now</button>
         </div>
       </div>
     </div>
