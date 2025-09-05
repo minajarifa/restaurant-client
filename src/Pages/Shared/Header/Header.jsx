@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     const navOptions=<>
-    <Link to={`/`}>Home</Link>
+    <Link className="m-2" to={`/`}>Home</Link>
+    <Link className="m-2" to={`/Our-menu`}>Our Menu</Link>
     </>
   return (
     <div>
-      <div className="fixed z-10 bg-opacity-30 navbar bg-base-100">
+      <div className="fixed z-10 border-t-0 bg-opacity-30 navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
