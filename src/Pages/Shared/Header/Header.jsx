@@ -32,7 +32,7 @@ export default function Header() {
              {navOptions}
             </ul>
           </div>
-          <a className="text-xl normal-case btn btn-ghost">daisyUI</a>
+          <a className="text-xl normal-case btn btn-ghost">Restaurant</a>
         </div>
         <div className="hidden navbar-center lg:flex">
          {navOptions}
