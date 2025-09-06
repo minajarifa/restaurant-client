@@ -10,6 +10,7 @@ export default function MenuCategory() {
   const soup = menu?.filter((item) => item.category === "soup");
   const offered = menu?.filter((item) => item.category === "offered");
   const Haddock = menu?.filter((item) => item.category === "Haddock");
+  console.log(popular, salad,drinks,dessert,pizza,offered,soup)
   
   return (
     <div>
