@@ -4,6 +4,7 @@ export default function Header() {
     const navOptions=<>
     <Link className="m-2" to={`/`}>Home</Link>
     <Link className="m-2" to={`/Our-menu`}>Our Menu</Link>
+    <Link className="m-2" to={`/Order-Now`}>Order Now</Link>
     </>
   return (
     <div>
