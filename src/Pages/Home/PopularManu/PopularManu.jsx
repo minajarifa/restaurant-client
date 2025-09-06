@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
+
 import Title from "../../../Components/Title/Title";
+import useMenu from "../../../hooks/useMenu";
 import MenuItem from "../../Shared/ManuItem/MenuItem";
 
 
 export default function PopularManu() {
-    const [menu,setMenu]= useState([])
-    useEffect(()=>{
-        fetch(`/menu.json`)
-        .then(res=>res.json())
-        .then(data=>{
-            // console.log(data)
-            const poputarItem= data.filter (item=>item.category==='popular')
-            setMenu(poputarItem)
-        })
-    },[])
-    console.log(menu)
+    const [menu]=useMenu()
+  
   return (
     <div className="py-8">
         <Title heading={`From our manu`} subHeading={`Popular Items`}/>
