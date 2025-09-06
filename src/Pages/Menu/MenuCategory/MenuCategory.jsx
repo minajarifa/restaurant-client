@@ -1,9 +1,7 @@
 export default function MenuCategory() {
   return (
     <div>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
+       <h1></h1>
         MenuCategory</div>
   )
 }
