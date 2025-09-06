@@ -6,8 +6,7 @@ const useMenu = () => {
     fetch(`/menu.json`)
       .then((res) => res.json())
       .then((data) => {
-        const poputarItem = data.filter((item) => item.category === "popular");
-        setMenu(poputarItem);
+        setMenu(data);
       });
   }, []);
   return[menu]
