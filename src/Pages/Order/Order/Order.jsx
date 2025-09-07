@@ -2,8 +2,12 @@ import { useState } from "react";
 import Cover from "../../Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import useMenu from "../../../hooks/useMenu";
+import FoodCard from "../../../Components/FoodCard/FoodCard";
 export default function Order() {
   const [tabIndex, setTabIndex] = useState(0);
+  const [menu] = useMenu();
+  console.log(menu);
   return (
     <div className="">
       <Cover />
@@ -12,15 +16,18 @@ export default function Order() {
           defaultIndex={tabIndex}
           onSelect={(index) => {
             setTabIndex(index);
-            console.log(index)
+            console.log(index);
           }}
         >
           <TabList className="text-center">
-            <Tab>Title 1</Tab>
-            <Tab>Title 2</Tab>
+            {menu.map((item) => (
+              <Tab>{item?.category}</Tab>
+            ))}
           </TabList>
-          <TabPanel>Title 1</TabPanel>
-          <TabPanel>Title 2</TabPanel>
+
+          {menu.map((item) => (
+            <FoodCard key={item._id} item={item}  TabPanel={TabPanel}></FoodCard>
+          ))}
         </Tabs>
       </div>
     </div>
