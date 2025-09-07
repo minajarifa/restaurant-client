@@ -20,9 +20,9 @@ export default function Order() {
           }}
         >
           <TabList className="text-center">
-            {menu.map((item) => (
-              <Tab>{item?.category}</Tab>
-            ))}
+            {/* {menu.map((item) => (
+              <Tab>{ item?.category}</Tab>
+            ))} */}<Tab>Tab</Tab>
           </TabList>
 
           {menu.map((item) => (
