@@ -3,10 +3,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 export default function Order() {
   return (
-    <div>
+    <div className="">
       <Cover />
-      <Tabs>
-        <TabList>
+      <Tabs className="my-20">
+        <TabList  className='text-center'>
           <Tab>Title 1</Tab>
           <Tab>Title 2</Tab>
         </TabList>
