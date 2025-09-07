@@ -38,39 +38,53 @@ export default function Order() {
             <Tab>offered</Tab>
           </TabList>
           <TabPanel>
-            {salad.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {salad.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {pizza.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {pizza.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {soup.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {soup.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {dessert.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {dessert.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {drinks.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {drinks.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {popular.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {popular.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            {offered.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
+            <div className="grid grid-cols-3 gap-10">
+              {offered.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
           </TabPanel>
         </Tabs>
       </div>
