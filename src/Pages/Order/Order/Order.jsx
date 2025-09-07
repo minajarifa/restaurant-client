@@ -7,7 +7,13 @@ import FoodCard from "../../../Components/FoodCard/FoodCard";
 export default function Order() {
   const [tabIndex, setTabIndex] = useState(0);
   const [menu] = useMenu();
-  console.log(menu);
+  const popular = menu?.filter((item) => item.category === "popular");
+  const salad = menu?.filter((item) => item.category === "salad");
+  const dessert = menu?.filter((item) => item.category === "dessert");
+  const drinks = menu?.filter((item) => item.category === "drinks");
+  const pizza = menu?.filter((item) => item.category === "pizza");
+  const soup = menu?.filter((item) => item.category === "soup");
+  const offered = menu?.filter((item) => item.category === "offered");
   return (
     <div className="">
       <Cover />
@@ -22,12 +28,22 @@ export default function Order() {
           <TabList className="text-center">
             {/* {menu.map((item) => (
               <Tab>{ item?.category}</Tab>
-            ))} */}<Tab>Tab</Tab>
+            ))} */}
+            <Tab>Salad</Tab>
+            <Tab>Pizza</Tab>
+            <Tab>Soup</Tab>
+            <Tab>Dessert</Tab>
+            <Tab>Drinks</Tab>
+            <Tab>popular</Tab>
+            <Tab>offered</Tab>
           </TabList>
-
-          {menu.map((item) => (
-            <FoodCard key={item._id} item={item}  TabPanel={TabPanel}></FoodCard>
-          ))}
+          {/* <TabPanel>{salad}</TabPanel>
+          <TabPanel>{pizza}</TabPanel>
+          <TabPanel>{soup}</TabPanel>
+          <TabPanel>{dessert}</TabPanel>
+          <TabPanel>{drinks}</TabPanel>
+          <TabPanel>{popular}</TabPanel>
+          <TabPanel>{offered}</TabPanel> */}
         </Tabs>
       </div>
     </div>

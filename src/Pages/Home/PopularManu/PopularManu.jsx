@@ -5,8 +5,6 @@ import useMenu from "../../../hooks/useMenu";
 export default function PopularManu() {
   const [menu] = useMenu();
   const popular = menu?.filter((item) => item.category === "popular");
-  console.log(popular);
-  console.log(menu);
   return (
     <div className="py-8">
       <Title heading={`From our manu`} subHeading={`Popular Items`} />
