@@ -1,23 +1,28 @@
+import { useState } from "react";
 import Cover from "../../Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 export default function Order() {
+  const [tabIndex, setTabIndex] = useState(0);
   return (
     <div className="">
       <Cover />
-      <Tabs className="my-20">
-        <TabList  className='text-center'>
-          <Tab>Title 1</Tab>
-          <Tab>Title 2</Tab>
-        </TabList>
-
-        <TabPanel>
-          <h2>Any content 1</h2>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 2</h2>
-        </TabPanel>
-      </Tabs>
+      <div className="my-10">
+        <Tabs
+          defaultIndex={tabIndex}
+          onSelect={(index) => {
+            setTabIndex(index);
+            console.log(index)
+          }}
+        >
+          <TabList className="text-center">
+            <Tab>Title 1</Tab>
+            <Tab>Title 2</Tab>
+          </TabList>
+          <TabPanel>Title 1</TabPanel>
+          <TabPanel>Title 2</TabPanel>
+        </Tabs>
+      </div>
     </div>
   );
 }
