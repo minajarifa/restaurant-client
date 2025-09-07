@@ -37,13 +37,41 @@ export default function Order() {
             <Tab>popular</Tab>
             <Tab>offered</Tab>
           </TabList>
-          {/* <TabPanel>{salad}</TabPanel>
-          <TabPanel>{pizza}</TabPanel>
-          <TabPanel>{soup}</TabPanel>
-          <TabPanel>{dessert}</TabPanel>
-          <TabPanel>{drinks}</TabPanel>
-          <TabPanel>{popular}</TabPanel>
-          <TabPanel>{offered}</TabPanel> */}
+          <TabPanel>
+            {salad.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {pizza.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {soup.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {dessert.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {drinks.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {popular.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
+          <TabPanel>
+            {offered.map((item) => (
+              <FoodCard key={item._id} item={item}></FoodCard>
+            ))}
+          </TabPanel>
         </Tabs>
       </div>
     </div>
