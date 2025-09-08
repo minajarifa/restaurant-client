@@ -1,4 +1,3 @@
-import React from "react";
 import Cover from "../../Shared/Cover/Cover";
 import { Helmet } from "react-helmet-async";
 import PopularManu from "../../Home/PopularManu/PopularManu";

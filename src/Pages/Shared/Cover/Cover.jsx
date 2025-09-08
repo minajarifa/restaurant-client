@@ -1,5 +1,5 @@
 import { Parallax } from 'react-parallax';
-export default function Cover({title}) {
+export default function Cover({title, image}) {
   return (
       <Parallax
         blur={{ min: -50, max: 50 }}
