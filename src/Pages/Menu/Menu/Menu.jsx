@@ -28,6 +28,7 @@ export default function Menu() {
       <Helmet>
         <title>Restaurant || Our Menu</title>
       </Helmet>
+      {/* popular manu */}
       <Cover title={`popular`} image={burgerImage}></Cover>
       <Title heading={"Popular Nenu"} subHeading={"Our Food Item"} />
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -35,6 +36,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* burger menu */}
       <Cover title={`burger`} image={burgerImage}></Cover>
       <Title heading={"Burger Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -42,6 +44,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* salad menu */}
       <Cover title={`salad`} image={saladImage}></Cover>
       <Title heading={"salad Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -49,6 +52,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* drinks mane */}
       <Cover title={`drinks`} image={drinksImage}></Cover>
       <Title heading={"drinks Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -56,6 +60,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* dessert menu */}
       <Cover title={`dessert`} image={dessertImage}></Cover>
       <Title heading={"dessert Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -63,6 +68,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* pizza menu */}
       <Cover title={`pizza`} image={pizzaImage}></Cover>
       <Title heading={"pizza Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -70,6 +76,7 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* soup menu */}
       <Cover title={`soup`} image={soupImage}></Cover>
       <Title heading={"soup Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
@@ -77,13 +84,15 @@ export default function Menu() {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
-      <Cover title={`offered`} image={offeredImage}></Cover>
-      <Title heading={"offered Nenu"} subHeading={"Our Food Item"}/>
+      {/* offered menu */}
+      <Cover title={` offered`} image={offeredImage}></Cover>
+      <Title heading={"Today's offered"} subHeading={"Don't Miss"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
         {offered.map((item) => (
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
+      {/* Haddock menu */}
       <Cover title={`Haddock`} image={HaddockImage}></Cover>
       <Title heading={"Haddock Nenu"} subHeading={"Our Food Item"}/>
       <div className="grid grid-cols-2 gap-4 my-20 ">
