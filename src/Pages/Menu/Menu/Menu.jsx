@@ -10,6 +10,7 @@ import saladImage from "../../../../public/images/CoverImage/salad.jpeg";
 import soupImage from "../../../../public/images/CoverImage/soup.jpeg";
 import useMenu from "../../../hooks/useMenu";
 import MenuItem from "../../Shared/ManuItem/MenuItem";
+import Title from "../../../Components/Title/Title";
 
 export default function Menu() {
   const [menu] = useMenu();
@@ -28,42 +29,68 @@ export default function Menu() {
         <title>Restaurant || Our Menu</title>
       </Helmet>
       <Cover title={`popular`} image={burgerImage}></Cover>
-      {
-        popular.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"Popular Nenu"} subHeading={"Our Food Item"} />
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {popular.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`burger`} image={burgerImage}></Cover>
-      {
-        burger.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"Burger Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {burger.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`salad`} image={saladImage}></Cover>
-      {
-        salad.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"salad Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {salad.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`drinks`} image={drinksImage}></Cover>
-       {
-        drinks.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"drinks Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {drinks.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`dessert`} image={dessertImage}></Cover>
-      {
-        dessert.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"dessert Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {dessert.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`pizza`} image={pizzaImage}></Cover>
-      {
-        pizza.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"pizza Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {pizza.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`soup`} image={soupImage}></Cover>
-      {
-        soup.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"soup Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {soup.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`offered`} image={offeredImage}></Cover>
-      {
-        offered.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
+      <Title heading={"offered Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {offered.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
       <Cover title={`Haddock`} image={HaddockImage}></Cover>
-       {
-        Haddock.map(item=><MenuItem key={item._id} item={item}></MenuItem>)
-      }
-    
+      <Title heading={"Haddock Nenu"} subHeading={"Our Food Item"}/>
+      <div className="grid grid-cols-2 gap-4 my-20 ">
+        {Haddock.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
     </div>
   );
 }
