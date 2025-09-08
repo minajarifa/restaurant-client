@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import useMenu from "../../../hooks/useMenu";
 import FoodCard from "../../../Components/FoodCard/FoodCard";
+import pizzaImage from "../../../../public/images/CoverImage/pizza.jpeg";
 export default function Order() {
   const [tabIndex, setTabIndex] = useState(0);
   const [menu] = useMenu();
@@ -16,7 +17,7 @@ export default function Order() {
   const offered = menu?.filter((item) => item.category === "offered");
   return (
     <div className="">
-      <Cover />
+      <Cover title={'Order Now'} image={pizzaImage}/>
       <div className="my-10">
         <Tabs
           defaultIndex={tabIndex}
