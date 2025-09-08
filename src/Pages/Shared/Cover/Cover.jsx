@@ -3,9 +3,10 @@ export default function Cover({title, image}) {
   return (
       <Parallax
         blur={{ min: -50, max: 50 }}
-        bgImage={`https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp`}
+        bgImage={image}
         bgImageAlt="the dog"
         strength={-200}
+        className='h-[500px]'
     >
        <div
       className=" hero h-[600px] my-10"
