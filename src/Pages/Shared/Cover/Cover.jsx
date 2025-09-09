@@ -11,7 +11,7 @@ export default function Cover({title, image}) {
        <div
       className=" hero h-[600px] my-10"
     >
-      <div className="hero-overlay"></div>
+      <div className="hero-overlay absolute inset-5 h-[400px] rounded-xl"></div>
       <div className="text-center hero-content text-neutral-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">{title}</h1>
