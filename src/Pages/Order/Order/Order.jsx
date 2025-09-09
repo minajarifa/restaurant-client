@@ -47,7 +47,7 @@ export default function Order() {
               {pizza.map((item) => (
                 <FoodCard key={item._id} item={item}></FoodCard>
               ))}
-            </div>
+            </div>~
           </TabPanel>
           <TabPanel>
             <div className="grid grid-cols-3 gap-10">
