@@ -33,64 +33,55 @@ export default function Menu() {
       <div>
         <Cover title={`popular`} image={burgerImage}></Cover>
         <Title heading={"Popular Nenu"} subHeading={"Our Food Item"} />
-        <MenuCategory  items={popular}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
+        <MenuCategory items={popular}></MenuCategory>
       </div>
       {/* burger menu */}
       <div>
         <Cover title={`burger`} image={burgerImage}></Cover>
         <Title heading={"Burger Nenu"} subHeading={"Our Food Item"} />
-         <MenuCategory items={burger}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
+        <MenuCategory items={burger}></MenuCategory>
       </div>
       {/* salad menu */}
       <div>
         <Cover title={`salad`} image={saladImage}></Cover>
         <Title heading={"salad Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={salad}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* drinks mane */}
       <div>
         <Cover title={`drinks`} image={drinksImage}></Cover>
         <Title heading={"drinks Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={drinks}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* dessert menu */}
       <div>
         <Cover title={`dessert`} image={dessertImage}></Cover>
         <Title heading={"dessert Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={dessert}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* pizza menu */}
       <div>
         <Cover title={`pizza`} image={pizzaImage}></Cover>
         <Title heading={"pizza Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={pizza}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* soup menu */}
       <div>
         <Cover title={`soup`} image={soupImage}></Cover>
         <Title heading={"soup Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={soup}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* offered menu */}
       <div>
         <Cover title={` offered`} image={offeredImage}></Cover>
         <Title heading={"Today's offered"} subHeading={"Don't Miss"} />
-         <MenuCategory items={offered}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
+        <MenuCategory items={offered}></MenuCategory>
       </div>
       {/* Haddock menu */}
       <div>
         <Cover title={`Haddock`} image={HaddockImage}></Cover>
         <Title heading={"Haddock Nenu"} subHeading={"Our Food Item"} />
         <MenuCategory items={Haddock}></MenuCategory>
-        <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
     </div>
   );
