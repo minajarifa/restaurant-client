@@ -11,6 +11,7 @@ import soupImage from "../../../../public/images/CoverImage/soup.jpeg";
 import useMenu from "../../../hooks/useMenu";
 import MenuItem from "../../Shared/ManuItem/MenuItem";
 import Title from "../../../Components/Title/Title";
+import MenuCategory from "../MenuCategory/MenuCategory";
 
 export default function Menu() {
   const [menu] = useMenu();
@@ -32,99 +33,63 @@ export default function Menu() {
       <div>
         <Cover title={`popular`} image={burgerImage}></Cover>
         <Title heading={"Popular Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 p-4 my-20 md:grid-cols-2 sm:grid-cols-1">
-          {popular.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory  items={popular}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* burger menu */}
       <div>
         <Cover title={`burger`} image={burgerImage}></Cover>
         <Title heading={"Burger Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {burger.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+         <MenuCategory items={burger}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* salad menu */}
       <div>
         <Cover title={`salad`} image={saladImage}></Cover>
         <Title heading={"salad Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 p-4 my-20 md:grid-cols-2 ">
-          {salad.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={salad}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* drinks mane */}
       <div>
         <Cover title={`drinks`} image={drinksImage}></Cover>
         <Title heading={"drinks Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {drinks.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={drinks}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* dessert menu */}
       <div>
         <Cover title={`dessert`} image={dessertImage}></Cover>
         <Title heading={"dessert Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {dessert.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={dessert}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* pizza menu */}
       <div>
         <Cover title={`pizza`} image={pizzaImage}></Cover>
         <Title heading={"pizza Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 p-4 my-20 md:grid-cols-2 ">
-          {pizza.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={pizza}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* soup menu */}
       <div>
         <Cover title={`soup`} image={soupImage}></Cover>
         <Title heading={"soup Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {soup.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={soup}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* offered menu */}
       <div>
         <Cover title={` offered`} image={offeredImage}></Cover>
         <Title heading={"Today's offered"} subHeading={"Don't Miss"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {offered.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+         <MenuCategory items={offered}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
       {/* Haddock menu */}
       <div>
         <Cover title={`Haddock`} image={HaddockImage}></Cover>
         <Title heading={"Haddock Nenu"} subHeading={"Our Food Item"} />
-        <div className="grid gap-5 my-20 md:grid-cols-2 ">
-          {Haddock.map((item) => (
-            <MenuItem key={item._id} item={item}></MenuItem>
-          ))}
-        </div>
+        <MenuCategory items={Haddock}></MenuCategory>
         <button className="mb-4 border-b-2 btn btn-block">Order Now</button>
       </div>
     </div>
