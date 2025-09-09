@@ -12,7 +12,6 @@ import useMenu from "../../../hooks/useMenu";
 import MenuItem from "../../Shared/ManuItem/MenuItem";
 import Title from "../../../Components/Title/Title";
 import MenuCategory from "../MenuCategory/MenuCategory";
-
 export default function Menu() {
   const [menu] = useMenu();
   const popular = menu?.filter((item) => item.category === "popular");

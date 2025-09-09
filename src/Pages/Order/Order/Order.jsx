@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import useMenu from "../../../hooks/useMenu";
 import FoodCard from "../../../Components/FoodCard/FoodCard";
 import pizzaImage from "../../../../public/images/CoverImage/pizza.jpeg";
+import { Helmet } from "react-helmet-async";
 export default function Order() {
   const [tabIndex, setTabIndex] = useState(0);
   const [menu] = useMenu();
@@ -17,6 +18,9 @@ export default function Order() {
   const offered = menu?.filter((item) => item.category === "offered");
   return (
     <div className="">
+      <Helmet>
+              <title>Restaurant || Order Food</title>
+            </Helmet>
       <Cover title={'Order Now'} image={pizzaImage}/>
       <div className="my-10">
         <Tabs
