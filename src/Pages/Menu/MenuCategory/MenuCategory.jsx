@@ -12,5 +12,10 @@ export default function MenuCategory({ items }) {
   //   const offered = menu?.filter((item) => item.category === "offered");
   //   const Haddock = menu?.filter((item) => item.category === "Haddock");
   console.log();
-  return <div></div>;
+  return (
+    <div>
+      <h1></h1>
+      <h1></h1>
+    </div>
+  );
 }
