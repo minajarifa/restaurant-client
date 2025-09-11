@@ -1,5 +1,5 @@
 export default function FoodCard({ item }) {
-  console.log(item);
+  // console.log(item);
   const {category,image,name,price,recipe,}=item;
   return (
     <div className="shadow-xl card w-96 bg-base-100">

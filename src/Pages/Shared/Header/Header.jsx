@@ -5,9 +5,11 @@ export default function Header() {
     <Link className="m-2" to={`/`}>Home</Link>
     <Link className="m-2" to={`/Our-menu`}>Our Menu</Link>
     <Link className="m-2" to={`/Order-Now`}>Order Now</Link>
+     <Link className="m-2" to={`/Login`}>Login</Link>
+      <Link className="m-2" to={`/Register`}>register</Link>
     </>
   return (
-    <div>
+    <div className="">
       <div className="fixed z-10 border-t-0 bg-opacity-30 navbar ">
         <div className="navbar-start">
           <div className="dropdown">

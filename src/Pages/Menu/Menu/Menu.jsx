@@ -29,7 +29,7 @@ export default function Menu() {
         <title>Restaurant || Our Menu</title>
       </Helmet>
       {/* popular manu */}
-      <div>
+      <div> 
         <Cover title={`popular`} image={burgerImage}></Cover>
         <Title heading={"Popular Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={popular}></MenuCategory>
