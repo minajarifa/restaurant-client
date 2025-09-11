@@ -31,43 +31,43 @@ export default function Menu() {
       {/* popular manu */}
       <div>
         <Cover title={`popular`} image={burgerImage}></Cover>
-        <Title heading={"Popular Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"Popular Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={popular}></MenuCategory>
       </div>
       {/* burger menu */}
       <div>
         <Cover title={`burger`} image={burgerImage}></Cover>
-        <Title heading={"Burger Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"Burger Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={burger}></MenuCategory>
       </div>
       {/* salad menu */}
       <div>
         <Cover title={`salad`} image={saladImage}></Cover>
-        <Title heading={"salad Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"salad Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={salad}></MenuCategory>
       </div>
       {/* drinks mane */}
       <div>
         <Cover title={`drinks`} image={drinksImage}></Cover>
-        <Title heading={"drinks Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"drinks Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={drinks}></MenuCategory>
       </div>
       {/* dessert menu */}
       <div>
         <Cover title={`dessert`} image={dessertImage}></Cover>
-        <Title heading={"dessert Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"dessert Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={dessert}></MenuCategory>
       </div>
       {/* pizza menu */}
       <div>
         <Cover title={`pizza`} image={pizzaImage}></Cover>
-        <Title heading={"pizza Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"pizza Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={pizza}></MenuCategory>
       </div>
       {/* soup menu */}
       <div>
         <Cover title={`soup`} image={soupImage}></Cover>
-        <Title heading={"soup Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"soup Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={soup}></MenuCategory>
       </div>
       {/* offered menu */}
@@ -79,7 +79,7 @@ export default function Menu() {
       {/* Haddock menu */}
       <div>
         <Cover title={`Haddock`} image={HaddockImage}></Cover>
-        <Title heading={"Haddock Nenu"} subHeading={"Our Food Item"} />
+        <Title heading={"Haddock Menu"} subHeading={"Our Food Item"} />
         <MenuCategory items={Haddock}></MenuCategory>
       </div>
     </div>

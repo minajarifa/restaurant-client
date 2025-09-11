@@ -4,8 +4,9 @@ import "./Featured.css"
 
 export default function Featured() {
   return (
-    <div className="my-10 mt-8 text-white bg-fixed featured-item">
+   <div>
       <Title heading={"Featured Item"} subHeading={"check it out"} />
+     <div className="my-10 mt-8 text-white bg-fixed featured-item">
       <div className="items-center justify-center py-20 px-36 md:flex bg-slate-700 bg-opacity-60">
         <div>
           <img src={featured} alt=""/>
@@ -25,5 +26,6 @@ export default function Featured() {
         </div>
       </div>
     </div>
+   </div>
   );
 }
