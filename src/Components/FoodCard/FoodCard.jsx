@@ -16,7 +16,7 @@ export default function FoodCard({ item }) {
         <h2 className="card-title">{name}</h2>
         <p>{recipe}</p>
         <div className="card-actions">
-          <button className="btn btn-outline bg-slate-100">Buy Now</button>
+          <button className="mt-4 border-0 border-b-4 border-orange-400 btn btn-outline ">Buy Now</button>
         </div>
       </div>
     </div>
