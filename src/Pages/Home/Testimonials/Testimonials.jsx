@@ -16,7 +16,7 @@ export default function Testimonials() {
         setReviews(data);
       });
   }, []);
-  console.log(reviews);
+  // console.log(reviews);
   return (
     <section>
       <Title subHeading={"what our client say"} heading={"Testimonials"} />
