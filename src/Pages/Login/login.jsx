@@ -1,7 +1,14 @@
 export default function Login() {
+  const handlesubmitLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value
+    const password = form.password.value
+    console.log(email,password);
+  };
   return (
-    <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="hero bg-base-200 min-h-screen my-10">
+      <div className="hero-content flex-col md:flex-row-reverse">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
           <p className="py-6">
@@ -10,19 +17,31 @@ export default function Login() {
             a id nisi.
           </p>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <div className="card-body">
+        <div className="card bg-base-100 w-1/2 max-w-sm  shadow-2xl">
+          <form onSubmit={handlesubmitLogin} className="card-body">
             <fieldset className="fieldset">
               <label className="label">Email</label>
-              <input type="email" className="input" placeholder="Email" />
+              <input
+                name="email"
+                type="email"
+                className="input"
+                placeholder="Email"
+              />
               <label className="label">Password</label>
-              <input type="password" className="input" placeholder="Password" />
-              <div>
-                <a className="link link-hover">Forgot password?</a>
-              </div>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <input
+                name="password"
+                type="password"
+                className="input"
+                placeholder="Password"
+              />
+              <input
+                className="btn btn-neutral mt-4"
+                type="submit"
+                value="Login"
+                id=""
+              />
             </fieldset>
-          </div>
+          </form>
         </div>
       </div>
     </div>
