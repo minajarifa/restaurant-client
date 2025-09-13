@@ -17,7 +17,7 @@ export default function Login() {
   };
   const handleValidateCaptcher = () => {
     const user_captcher_value = captcharef.current.value;
-    if (validateCaptcha(user_captche`r_value)) {
+    if (validateCaptcha(user_captcher_value)) {
       setDisabled(false);
     } else {
       setDisabled(true);
