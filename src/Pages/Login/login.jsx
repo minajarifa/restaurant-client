@@ -17,7 +17,7 @@ export default function Login() {
   };
   const handleValidateCaptcher = () => {
     const user_captcher_value = captcharef.current.value;
-    if (validateCaptcha(user_captcher_value)) {
+    if (validateCaptcha(user_captche`r_value)) {
       setDisabled(false);
     } else {
       setDisabled(true);
@@ -57,7 +57,7 @@ export default function Login() {
               </div>
               <div>
                 <label className="label">
-                  <LoadCanvasTemplate />
+                  <LoadCanvasTemplate/>
                 </label>
                 <input
                   ref={captcharef}
