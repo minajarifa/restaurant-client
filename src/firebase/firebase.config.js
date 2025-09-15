@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyByrvIAOzdzDKags2AdGmRKgSF4xEZ8POA",
-  authDomain: "restaurant-e71ac.firebaseapp.com",
-  projectId: "restaurant-e71ac",
-  storageBucket: "restaurant-e71ac.firebasestorage.app",
-  messagingSenderId: "235470428522",
-  appId: "1:235470428522:web:fa6ad6347d9041095aad13"
+  apiKey: import.meta.env.VITE_apiKey, 
+  authDomain: import.meta.env.VITE_authDomain, 
+  projectId: import.meta.env.VITE_projectId, 
+  storageBucket: import.meta.env.VITE_storageBucket, 
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId, 
 };
 
 export const app = initializeApp(firebaseConfig);
