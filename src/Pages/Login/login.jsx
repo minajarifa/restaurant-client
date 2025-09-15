@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  validateCaptcha,
+} from "react-simple-captcha";
 
 export default function Login() {
   const [disabled, setDisabled] = useState(true);
   const captcharef = useRef(null);
-  console.log(captcharef)
+  console.log(captcharef);
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
@@ -17,6 +21,7 @@ export default function Login() {
   };
   const handleValidateCaptcher = () => {
     const user_captcher_value = captcharef.current.value;
+    console.log(user_captcher_value);
     if (validateCaptcha(user_captcher_value)) {
       setDisabled(false);
     } else {
@@ -57,7 +62,7 @@ export default function Login() {
               </div>
               <div>
                 <label className="label">
-                  <LoadCanvasTemplate/>
+                  <LoadCanvasTemplate />
                 </label>
                 <input
                   ref={captcharef}
