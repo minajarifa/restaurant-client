@@ -4,7 +4,7 @@ import Footer from "../Pages/Shared/Footer/Footer";
 export default function Main() {
   const location = useLocation();
   console.log(location);
-  const noHeaderFooter = location.pathname.includes("/Login");
+  const noHeaderFooter = location.pathname.includes("/Login")||location.pathname.includes("/Register");
   return (
     <>
       {noHeaderFooter || <Header />}

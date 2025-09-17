@@ -1,14 +1,16 @@
-import {  useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
   validateCaptcha,
 } from "react-simple-captcha";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function Login() {
+  const { signIn } = useContext(AuthContext);
   const [disabled, setDisabled] = useState(true);
-  const captcharef = useRef(null);
-  console.log(captcharef);
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
@@ -18,9 +20,13 @@ export default function Login() {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    signIn(email, password).then((result) => {
+      const user = result.user;
+      console.log(user);
+    });
   };
-  const handleValidateCaptcher = () => {
-    const user_captcher_value = captcharef.current.value;
+  const handleValidateCaptcher = (e) => {
+    const user_captcher_value = e.target.value;
     console.log(user_captcher_value);
     if (validateCaptcha(user_captcher_value)) {
       setDisabled(false);
@@ -30,6 +36,9 @@ export default function Login() {
   };
   return (
     <div className="hero bg-base-200 min-h-screen my-10">
+      <Helmet>
+        <title>Restaurant || Login</title>
+      </Helmet>
       <div className="hero-content flex-col md:flex-row-reverse">
         <div className="text-center lg:text-left md:w-1/2">
           <h1 className="text-5xl font-bold">Login now!</h1>
@@ -65,18 +74,12 @@ export default function Login() {
                   <LoadCanvasTemplate />
                 </label>
                 <input
-                  ref={captcharef}
+                  onBlur={handleValidateCaptcher}
                   name="captcha"
                   type="text"
                   className="input"
                   placeholder="Type the text captcha above"
                 />
-                <button
-                  onClick={handleValidateCaptcher}
-                  className="btn btn-outline btn-xs uppercase mt-2"
-                >
-                  Validate
-                </button>
               </div>
 
               <input
@@ -88,6 +91,13 @@ export default function Login() {
               />
             </fieldset>
           </form>
+          <p className="mb-8 ml-5">
+            New Here! please
+            <Link className="text-blue-500 mx-2" to={`/Register`}>
+              Register
+            </Link>
+            Now
+          </p>
         </div>
       </div>
     </div>

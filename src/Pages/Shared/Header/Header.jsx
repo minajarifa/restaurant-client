@@ -1,13 +1,48 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 export default function Header() {
-    const navOptions=<>
-    <Link className="m-2" to={`/`}>Home</Link>
-    <Link className="m-2" to={`/Our-menu`}>Our Menu</Link>
-    <Link className="m-2" to={`/Order-Now`}>Order Now</Link>
-     <Link className="m-2" to={`/Login`}>Login</Link>
-      <Link className="m-2" to={`/Register`}>register</Link>
+  const { user, logout } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logout()
+      .then(() => {
+        Swal.fire("SweetAlert2 is working!");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const navOptions = (
+    <>
+      <Link className="m-2" to={`/`}>
+        Home
+      </Link>
+      <Link className="m-2" to={`/Our-menu`}>
+        Our Menu
+      </Link>
+      <Link className="m-2" to={`/Order-Now`}>
+        Order Now
+      </Link>
+      {user ? (
+        <>
+          <button onClick={handleLogOut} className="btn btn-ghost">
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <Link className="m-2" to={`/Login`}>
+            Login
+          </Link>
+          <Link className="m-2" to={`/Register`}>
+            register
+          </Link>
+        </>
+      )}
     </>
+  );
   return (
     <div className="">
       <div className="fixed z-10 border-t-0 bg-opacity-30 navbar ">
@@ -33,14 +68,12 @@ export default function Header() {
               tabIndex={0}
               className="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
             >
-             {navOptions}
+              {navOptions}
             </ul>
           </div>
           <a className="text-xl normal-case btn btn-ghost">Restaurant</a>
         </div>
-        <div className="hidden navbar-center lg:flex">
-         {navOptions}
-        </div>
+        <div className="hidden navbar-center lg:flex">{navOptions}</div>
         <div className="navbar-end">
           <a className="btn">Get started</a>
         </div>
