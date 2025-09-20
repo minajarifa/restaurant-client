@@ -33,7 +33,7 @@ export default function Login() {
   };
   const handleValidateCaptcher = (e) => {
     const user_captcher_value = e.target.value;
-    console.log(user_captcher_value);
+    // console.log(user_captcher_value);
     if (validateCaptcha(user_captcher_value)) {
       setDisabled(false);
     } else {
@@ -41,11 +41,11 @@ export default function Login() {
     }
   };
   return (
-    <div className="hero bg-base-200 min-h-screen my-10">
+    <div className="min-h-screen my-10 hero bg-base-200">
       <Helmet>
         <title>Restaurant || Login</title>
       </Helmet>
-      <div className="hero-content flex-col md:flex-row-reverse">
+      <div className="flex-col hero-content md:flex-row-reverse">
         <div className="text-center lg:text-left md:w-1/2">
           <h1 className="text-5xl font-bold">Login now!</h1>
           <p className="py-6">
@@ -54,7 +54,7 @@ export default function Login() {
             a id nisi.
           </p>
         </div>
-        <div className="card bg-base-100 w-1/2 max-w-sm  shadow-2xl">
+        <div className="w-1/2 max-w-sm shadow-2xl card bg-base-100">
           <form onSubmit={handlesubmitLogin} className="card-body">
             <fieldset className="fieldset">
               <div>
@@ -90,7 +90,7 @@ export default function Login() {
 
               <input
                 disabled={disabled}
-                className="btn btn-neutral mt-4"
+                className="mt-4 btn btn-neutral"
                 type="submit"
                 value="Login"
                 id=""
@@ -99,7 +99,7 @@ export default function Login() {
           </form>
           <p className="mb-8 ml-5">
             New Here! please
-            <Link className="text-blue-500 mx-2" to={`/Register`}>
+            <Link className="mx-2 text-blue-500" to={`/Register`}>
               Register
             </Link>
             Now
