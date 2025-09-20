@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase.config";
@@ -10,7 +11,7 @@ import { auth } from "../firebase/firebase.config";
 export const AuthContext = createContext(null);
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
   //   create user
   const createUser = (email, password) => {
     setLoading(true);
@@ -26,6 +27,12 @@ export default function AuthProvider({ children }) {
     setLoading(true);
     return signIn(auth);
   };
+  // update photo , user name
+  const updateUserProfile = (name,photo) => {
+   return  updateProfile(auth.currentUser,{
+    displayName:name , photoURL:photo,
+   })
+  };
   //   user controler
   useEffect(() => {
     const unsunscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -34,7 +41,7 @@ export default function AuthProvider({ children }) {
       setLoading(false);
     });
     return () => {
-      return unsunscribe();
+      return () => unsunscribe();
     };
   }, []);
 
@@ -44,6 +51,7 @@ export default function AuthProvider({ children }) {
     createUser,
     signIn,
     logout,
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
