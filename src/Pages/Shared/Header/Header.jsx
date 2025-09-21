@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext);
@@ -24,6 +25,12 @@ export default function Header() {
       </Link>
       <Link className="m-2" to={`/Order-Now`}>
         Order Now
+      </Link>
+      <Link className="m-2" to={`/`}>
+        <button className="btn">
+          <FaShoppingCart className="mr-2" />
+          <div className="badge badge-sm badge-secondary">+0</div>
+        </button>
       </Link>
       {user ? (
         <>
