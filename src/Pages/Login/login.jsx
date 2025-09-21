@@ -7,13 +7,15 @@ import {
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function Login() {
   const { signIn } = useContext(AuthContext);
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state.from.pathname || "/"
+  const from = location?.state?.from?.pathname || "/";
+  // console.log(from);
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -24,16 +26,21 @@ export default function Login() {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    signIn(email, password)
-    .then((result) => {
+    signIn(email, password).then((result) => {
       const user = result.user;
       console.log(user);
-      navigate(from,{replace:true})
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User loged in successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate(from, { replace: true });
     });
   };
   const handleValidateCaptcher = (e) => {
     const user_captcher_value = e.target.value;
-    // console.log(user_captcher_value);
     if (validateCaptcha(user_captcher_value)) {
       setDisabled(false);
     } else {

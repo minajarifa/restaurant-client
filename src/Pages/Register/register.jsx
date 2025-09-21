@@ -2,19 +2,36 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function Register() {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,updateUserProfile } = useContext(AuthContext);
   const handlesubmitSignin = (event) => {
     event.preventDefault();
     const form = event.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
     createUser(email, password)
     .then((result) => {
       const user = result.user;
+      updateUserProfile(name,photo)
+      .then(()=>{
+        console.log('user profile update')
+      })
+      .catch(error=>{
+        console.log(error)
+      })
       console.log(user);
+      Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "User registered successfully",
+  showConfirmButton: false,
+  timer: 1500
+});
     });
   };
   return (
@@ -22,8 +39,8 @@ export default function Register() {
       <Helmet>
         <title>Restaurant || Signin</title>
       </Helmet>
-      <div className="hero bg-base-200 min-h-screen my-10">
-        <div className="hero-content flex-col md:flex-row-reverse">
+      <div className="min-h-screen my-10 hero bg-base-200">
+        <div className="flex-col hero-content md:flex-row-reverse">
           <div className="text-center lg:text-left md:w-1/2">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
@@ -32,7 +49,7 @@ export default function Register() {
               et a id nisi.
             </p>
           </div>
-          <div className="card bg-base-100 w-1/2 max-w-sm  shadow-2xl">
+          <div className="w-1/2 max-w-sm shadow-2xl card bg-base-100">
             <form onSubmit={handlesubmitSignin} className="card-body">
               <fieldset className="fieldset">
                 <div>
@@ -76,7 +93,7 @@ export default function Register() {
                   />
                 </div>
                 <input
-                  className="btn btn-primary mt-4"
+                  className="mt-4 btn btn-primary"
                   type="submit"
                   value="Sign up"
                   id=""
@@ -85,7 +102,7 @@ export default function Register() {
             </form>
             <p className="mb-8 ml-5">
               Already have an account please
-              <Link className="text-blue-500 mx-2" to={`/Login`}>
+              <Link className="mx-2 text-blue-500" to={`/Login`}>
                 Login
               </Link>
               Now

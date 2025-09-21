@@ -6,7 +6,11 @@ export default function PrivateRoute({ children }) {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
   if (loading === true) {
-    return <progress className="progress w-56"></progress>;
+    return (
+      <div className="flex items-center justify-center my-20">
+        <progress className="w-56 progress"></progress>
+      </div>
+    );
   }
   if (user) {
     return children;
