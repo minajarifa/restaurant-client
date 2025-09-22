@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
 
 export default function Register() {
-  const { createUser,updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useAuth();
+  const navigate = useNavigate();
   const handlesubmitSignin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -14,24 +14,24 @@ export default function Register() {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    createUser(email, password)
-    .then((result) => {
+    createUser(email, password).then((result) => {
       const user = result.user;
-      updateUserProfile(name,photo)
-      .then(()=>{
-        console.log('user profile update')
-      })
-      .catch(error=>{
-        console.log(error)
-      })
+      updateUserProfile(name, photo)
+        .then(() => {
+          console.log("user profile update");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       console.log(user);
+      navigate('/')
       Swal.fire({
-  position: "top-end",
-  icon: "success",
-  title: "User registered successfully",
-  showConfirmButton: false,
-  timer: 1500
-});
+        position: "top-end",
+        icon: "success",
+        title: "User registered successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     });
   };
   return (

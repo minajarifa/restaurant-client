@@ -1,16 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
   validateCaptcha,
 } from "react-simple-captcha";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
 
 export default function Login() {
-  const { signIn } = useContext(AuthContext);
+  const { signIn } = useAuth();
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
@@ -71,6 +71,7 @@ export default function Login() {
                   type="email"
                   className="input"
                   placeholder="Email"
+                  required
                 />
               </div>
               <div>
@@ -80,6 +81,7 @@ export default function Login() {
                   type="password"
                   className="input"
                   placeholder="Password"
+                  required
                 />
               </div>
               <div>
@@ -96,7 +98,7 @@ export default function Login() {
               </div>
 
               <input
-                disabled={disabled}
+                // disabled={disabled}
                 className="mt-4 btn btn-neutral"
                 type="submit"
                 value="Login"

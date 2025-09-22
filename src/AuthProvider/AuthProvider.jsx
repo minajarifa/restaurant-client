@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
@@ -25,7 +26,7 @@ export default function AuthProvider({ children }) {
   //   logout
   const logout = () => {
     setLoading(true);
-    return signIn(auth);
+    return signOut(auth);
   };
   // update photo , user name
   const updateUserProfile = (name,photo) => {
