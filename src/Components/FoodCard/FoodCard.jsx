@@ -2,7 +2,9 @@ import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useLocation, useNavigate } from "react-router-dom";
+import useCart from "../../hooks/useCart";
 export default function FoodCard({ item }) {
+  const [, refetch] = useCart();
   const { category, image, name, price, recipe, _id } = item;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -25,10 +27,14 @@ export default function FoodCard({ item }) {
           Swal.fire({
             title: `${name} added to you cart`,
             icon: "success",
-            showCancelButton:false,
+            showCancelButton: false,
             draggable: true,
           });
+          // refacth the cart by tanstack query
+          refetch()
+          
         }
+        
       });
     } else {
       Swal.fire({

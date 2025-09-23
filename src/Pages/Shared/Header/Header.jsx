@@ -8,7 +8,6 @@ import useCart from "../../../hooks/useCart";
 export default function Header() {
   const { user, logout } = useContext(AuthContext);
   const [cart] = useCart();
-  console.log(cart)
   const handleLogOut = () => {
     logout()
       .then(() => {
@@ -55,7 +54,7 @@ export default function Header() {
   );
   return (
     <div className="">
-      <div className="fixed z-10 border-t-0 bg-opacity-30 navbar ">
+      <div className="fixed z-10 border-t-0 shadow-sm bg-opacity-30 navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
