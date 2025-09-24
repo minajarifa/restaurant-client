@@ -3,13 +3,20 @@
 ## 📖 Description
 Short description of your project.  
 Explain what the project does and why it is useful.
-Currently, two official plugins are available:
+Currently, two official plugins are available
 ---
+
+## live site link
+[Resturent]()
+
+## Giithub link
+[client site link](https://github.com/minajarifa/restaurant-client)
+[server site link](https://github.com/minajarifa/restaurant-server)
 
 ## ✨ Features
 - User authentication (JWT / Firebase)
 - Role-based access (Admin, User, etc.)
-- CRUD operations (Create, Read, Update, Delete)
+- CRUD operations (Create, Read, Update, Delete, post)
 - Responsive design for mobile and desktop
 - REST API integration
 
