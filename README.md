@@ -46,7 +46,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## ⚙️ Installation
 
-
 ```bash
 git clone https://github.com/minajarifa/restaurant-client.git
 cd restaurant-client
@@ -55,21 +54,70 @@ npm start
 ```
 
 ## Restaurant-client
-
-│
-├── client/           
-│   ├── public/     
-│   ├── src/         
-│   │   ├── pages/       
-│   │   ├── components/   
-│   │   ├── routes/       
-│   │   ├── context/     
-│   │   ├── services/     
-│   │   ├── App.js
-│   │   └── main.jsx
-|   |   
-│   └── package.json
-│
-
-
-```client
+📦src
+ ┣ 📂assets
+ ┃ ┗ 📜react.svg
+ ┣ 📂AuthProvider
+ ┃ ┗ 📜AuthProvider.jsx
+ ┣ 📂Components
+ ┃ ┣ 📂FoodCard
+ ┃ ┃ ┗ 📜FoodCard.jsx
+ ┃ ┣ 📂Section
+ ┃ ┃ ┗ 📜Section.jsx
+ ┃ ┗ 📂Title
+ ┃ ┃ ┗ 📜Title.jsx
+ ┣ 📂firebase
+ ┃ ┗ 📜firebase.config.js
+ ┣ 📂hooks
+ ┃ ┣ 📜useAuth.jsx
+ ┃ ┣ 📜useAxiosSecure.jsx
+ ┃ ┣ 📜useCart.jsx
+ ┃ ┗ 📜useMenu.jsx
+ ┣ 📂Layouts
+ ┃ ┣ 📜Dashboard.jsx
+ ┃ ┗ 📜Main.jsx
+ ┣ 📂Pages
+ ┃ ┣ 📂Dashboard
+ ┃ ┃ ┗ 📂Cart
+ ┃ ┃ ┃ ┗ 📜Cart.jsx
+ ┃ ┣ 📂Home
+ ┃ ┃ ┣ 📂Banner
+ ┃ ┃ ┃ ┗ 📜Banner.jsx
+ ┃ ┃ ┣ 📂Category
+ ┃ ┃ ┃ ┗ 📜Category.jsx
+ ┃ ┃ ┣ 📂Featured
+ ┃ ┃ ┃ ┣ 📜Featured.css
+ ┃ ┃ ┃ ┗ 📜Featured.jsx
+ ┃ ┃ ┣ 📂PopularManu
+ ┃ ┃ ┃ ┗ 📜PopularManu.jsx
+ ┃ ┃ ┣ 📂Testimonials
+ ┃ ┃ ┃ ┗ 📜Testimonials.jsx
+ ┃ ┃ ┗ 📜Home.jsx
+ ┃ ┣ 📂Login
+ ┃ ┃ ┗ 📜Login.jsx
+ ┃ ┣ 📂Menu
+ ┃ ┃ ┣ 📂Menu
+ ┃ ┃ ┃ ┗ 📜Menu.jsx
+ ┃ ┃ ┗ 📂MenuCategory
+ ┃ ┃ ┃ ┗ 📜MenuCategory.jsx
+ ┃ ┣ 📂Order
+ ┃ ┃ ┗ 📂Order
+ ┃ ┃ ┃ ┗ 📜Order.jsx
+ ┃ ┣ 📂Register
+ ┃ ┃ ┗ 📜Register.jsx
+ ┃ ┗ 📂Shared
+ ┃ ┃ ┣ 📂Cover
+ ┃ ┃ ┃ ┗ 📜Cover.jsx
+ ┃ ┃ ┣ 📂Footer
+ ┃ ┃ ┃ ┗ 📜Footer.jsx
+ ┃ ┃ ┣ 📂Header
+ ┃ ┃ ┃ ┗ 📜Header.jsx
+ ┃ ┃ ┗ 📂ManuItem
+ ┃ ┃ ┃ ┗ 📜MenuItem.jsx
+ ┣ 📂Routers
+ ┃ ┣ 📜PrivateRoute.jsx
+ ┃ ┗ 📜router.jsx
+ ┣ 📜App.css
+ ┣ 📜App.jsx
+ ┣ 📜index.css
+ ┗ 📜main.jsx
