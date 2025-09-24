@@ -54,6 +54,7 @@ npm start
 ```
 
 ## Restaurant-client
+```
 📦src
  ┣ 📂assets
  ┃ ┗ 📜react.svg
@@ -121,3 +122,4 @@ npm start
  ┣ 📜App.jsx
  ┣ 📜index.css
  ┗ 📜main.jsx
+ ```
