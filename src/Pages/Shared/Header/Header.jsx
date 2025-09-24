@@ -28,7 +28,7 @@ export default function Header() {
       <Link className="m-2" to={`/Order-Now`}>
         Order Now
       </Link>
-      <Link className="m-2" to={`/`}>
+      <Link className="m-2" to={`/dashboard`}>
         <button className="btn">
           <FaShoppingCart className="mr-2" />
           <div className="badge badge-sm badge-secondary">+{cart?.length}</div>
