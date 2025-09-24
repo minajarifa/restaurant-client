@@ -45,13 +45,14 @@ If you are developing a production application, we recommend using TypeScript wi
 ### ✅ সঠিক লেখা হবে এভাবে:  
 
 ```markdown
-## ⚙️ Installation
 
+## ⚙️ Installation
 ```bash
 git clone https://github.com/minajarifa/restaurant-client.git
 cd restaurant-client
 npm install
-npm start
+npm start 
+```
 
 
  
