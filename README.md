@@ -33,11 +33,11 @@ Currently, two official plugins are available
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 ## 🛠 Tech Stack
-**Frontend:** React, Tailwind CSS  
+**Frontend:** HTML, React, Tailwind CSS  
 **Backend:** Node.js, Express.js  
 **Database:** MongoDB (Atlas)  
 **Authentication:** JWT / Firebase  
-**Hosting:** Vercel (frontend), Render/Heroku (backend)
+**Hosting:** firebase hosting (frontend), Rvercel(backend)
 
 
 
@@ -47,3 +47,34 @@ If you are developing a production application, we recommend using TypeScript wi
 ```bash
 
  https://github.com/minajarifa/restaurant-client.git
+
+
+
+
+ project-name/
+│
+├── client/           # React part (frontend)
+│   ├── public/       # index.html, favicon
+│   ├── src/          # React code
+│   │   ├── components/   # ছোট ছোট reusable UI parts (Navbar, Button, Card)
+│   │   ├── pages/        # আলাদা আলাদা পেজ (Home, Login, Dashboard)
+│   │   ├── routes/       # Routing setup (React Router)
+│   │   ├── context/      # AuthProvider / Context API
+│   │   ├── services/     # API call functions (axios/fetch)
+│   │   ├── App.js
+│   │   └── main.jsx      # Entry point (Vite হলে)
+│   └── package.json
+│
+├── server/           # Node + Express part (backend)
+│   ├── config/       # MongoDB connection (database.js)
+│   ├── models/       # Database models (User.js, Service.js)
+│   ├── routes/       # API routes (authRoutes.js, serviceRoutes.js)
+│   ├── controllers/  # Logic (login, register, CRUD functions)
+│   ├── middleware/   # Authentication check, error handler
+│   ├── server.js     # Main backend file
+│   └── package.json
+│
+├── .env              # Secret keys (MongoDB URL, JWT secret, etc.)
+├── .gitignore
+├── README.md
+└── package.json      # root package.json (concurrently দিয়ে client+server চালাতে চাইলে)
