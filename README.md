@@ -54,17 +54,22 @@ npm install
 npm start 
 ```
 
-project-name/
+## Restaurant-client
+
 │
 ├── client/           
 │   ├── public/     
 │   ├── src/         
-│   │   ├── components/   
 │   │   ├── pages/       
+│   │   ├── components/   
 │   │   ├── routes/       
 │   │   ├── context/     
 │   │   ├── services/     
 │   │   ├── App.js
-│   │   └── main.jsx      
+│   │   └── main.jsx
+|   |   
 │   └── package.json
 │
+
+
+```client
