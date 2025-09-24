@@ -54,5 +54,17 @@ npm install
 npm start 
 ```
 
-
- 
+project-name/
+│
+├── client/           
+│   ├── public/     
+│   ├── src/         
+│   │   ├── components/   
+│   │   ├── pages/       
+│   │   ├── routes/       
+│   │   ├── context/     
+│   │   ├── services/     
+│   │   ├── App.js
+│   │   └── main.jsx      
+│   └── package.json
+│
