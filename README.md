@@ -6,11 +6,21 @@ Short description of your project.
 Explain what the project does and why it is useful.
 Currently, two official plugins are available
 
----
 
 ## live site link
 
 [Resturent]()
+
+
+
+## ⚙️ Installation
+
+```bash
+# Clone this repository
+git clone https://github.com/minajarifa/restaurant-client.git
+## Expanding the ESLint configuration
+
+
 
 ## Giithub link
 
@@ -28,12 +38,6 @@ Currently, two official plugins are available
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-## ⚙️ Installation
-
-```bash
-# Clone this repository
-git clone https://github.com/minajarifa/restaurant-client.git
-## Expanding the ESLint configuration
-
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 ```
+
