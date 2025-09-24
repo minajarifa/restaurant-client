@@ -4,6 +4,7 @@
 Short description of your project.  
 Explain what the project does and why it is useful.
 Currently, two official plugins are available:
+---
 
 ## ✨ Features
 - User authentication (JWT / Firebase)
