@@ -42,39 +42,16 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
+### ✅ সঠিক লেখা হবে এভাবে:  
+
+```markdown
 ## ⚙️ Installation
 
 ```bash
+git clone https://github.com/minajarifa/restaurant-client.git
+cd restaurant-client
+npm install
+npm start
 
- https://github.com/minajarifa/restaurant-client.git
 
-
-
-
- project-name/
-│
-├── client/           # React part (frontend)
-│   ├── public/       # index.html, favicon
-│   ├── src/          # React code
-│   │   ├── components/   # ছোট ছোট reusable UI parts (Navbar, Button, Card)
-│   │   ├── pages/        # আলাদা আলাদা পেজ (Home, Login, Dashboard)
-│   │   ├── routes/       # Routing setup (React Router)
-│   │   ├── context/      # AuthProvider / Context API
-│   │   ├── services/     # API call functions (axios/fetch)
-│   │   ├── App.js
-│   │   └── main.jsx      # Entry point (Vite হলে)
-│   └── package.json
-│
-├── server/           # Node + Express part (backend)
-│   ├── config/       # MongoDB connection (database.js)
-│   ├── models/       # Database models (User.js, Service.js)
-│   ├── routes/       # API routes (authRoutes.js, serviceRoutes.js)
-│   ├── controllers/  # Logic (login, register, CRUD functions)
-│   ├── middleware/   # Authentication check, error handler
-│   ├── server.js     # Main backend file
-│   └── package.json
-│
-├── .env              # Secret keys (MongoDB URL, JWT secret, etc.)
-├── .gitignore
-├── README.md
-└── package.json      # root package.json (concurrently দিয়ে client+server চালাতে চাইলে)
+ 
