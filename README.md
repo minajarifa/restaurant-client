@@ -38,6 +38,5 @@ If you are developing a production application, we recommend using TypeScript wi
 ## ⚙️ Installation
 
 ```bash
-# Clone this repository
-git clone https://github.com/minajarifa/restaurant-client.git
-## Expanding the ESLint configuration
+
+ https://github.com/minajarifa/restaurant-client.git
