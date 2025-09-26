@@ -2,10 +2,13 @@ import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SicialLogin/SocialLogin";
 
 export default function Register() {
   const { createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
   const handlesubmitSignin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,13 +21,21 @@ export default function Register() {
       const user = result.user;
       updateUserProfile(name, photo)
         .then(() => {
-          console.log("user profile update");
+          const userInfo = {
+            name,
+            photo,
+            email,
+          };
+          axiosPublic.post("/users", userInfo).then((res) => {
+            console.log(res.data.insertedId);
+            console.log("user added the database");
+          });
         })
         .catch((error) => {
           console.log(error);
         });
       console.log(user);
-      navigate('/')
+      navigate("/");
       Swal.fire({
         position: "top-end",
         icon: "success",
@@ -107,6 +118,9 @@ export default function Register() {
               </Link>
               Now
             </p>
+           
+              <SocialLogin />
+           
           </div>
         </div>
       </div>

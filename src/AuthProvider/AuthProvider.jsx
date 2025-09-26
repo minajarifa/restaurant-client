@@ -1,8 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 import {
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -13,6 +15,7 @@ export const AuthContext = createContext(null);
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const googleProvider = new GoogleAuthProvider();
   //   create user
   const createUser = (email, password) => {
     setLoading(true);
@@ -29,10 +32,16 @@ export default function AuthProvider({ children }) {
     return signOut(auth);
   };
   // update photo , user name
-  const updateUserProfile = (name,photo) => {
-   return  updateProfile(auth.currentUser,{
-    displayName:name , photoURL:photo,
-   })
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
+  // google login
+  const googleSigning = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
   };
   //   user controler
   useEffect(() => {
@@ -53,6 +62,7 @@ export default function AuthProvider({ children }) {
     signIn,
     logout,
     updateUserProfile,
+    googleSigning,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
