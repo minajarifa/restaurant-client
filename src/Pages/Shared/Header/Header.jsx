@@ -1,17 +1,17 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
+import useAuth from "../../../hooks/useAuth";
+import { HiOutlineLogout } from "react-icons/hi";
 
 export default function Header() {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout } = useAuth();
   const [cart] = useCart();
   const handleLogOut = () => {
     logout()
       .then(() => {
-        Swal.fire("SweetAlert2 is working!");
+        Swal.fire("user logout successfully!");
       })
       .catch((error) => {
         console.log(error);
@@ -28,7 +28,7 @@ export default function Header() {
       <Link className="m-2" to={`/Order-Now`}>
         Order Now
       </Link>
-      <Link className="m-2" to={`/dashboard`}>
+      <Link className="m-2" to={`/dashboard/cart`}>
         <button className="btn">
           <FaShoppingCart className="mr-2" />
           <div className="badge badge-sm badge-secondary">+{cart?.length}</div>
@@ -37,6 +37,7 @@ export default function Header() {
       {user ? (
         <>
           <button onClick={handleLogOut} className="btn btn-ghost">
+            <HiOutlineLogout />
             Logout
           </button>
         </>
